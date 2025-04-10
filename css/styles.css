@@ -319,3 +319,98 @@ button {
         display: none;
     }
 }
+/* section 1*/
+.main {
+    max-width: 320px;
+    width: 100%;
+    background-color: #2E2F42;
+    padding: 72px 0px;
+    margin: 0 auto;
+    background-size: cover;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main-title {
+    max-width: 216px;
+    margin: 0px auto; 
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 107%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #ffffff;
+}
+.main-button {
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    display: block;
+    margin: 72px auto 0;
+    border: none;
+    background-color: #4d5ae5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 768px;
+        padding: 112px 0;
+    }
+    .main-title {
+        max-width: 496px;
+    }
+    .main-button {
+        margin: 36px auto 0;
+    }
+}
+@media  screen and (min-width: 1158px) {
+    .main {
+        max-width: 1440px;
+        padding: 188px 0px;
+    }
+    .main-title {
+        font-size: 56px;
+    }
+    .main-button {
+        margin: 48px auto 0;
+    }
+}
+
+
+/*section 2*/
+.icon-sec-two {
+    display: none;
+}
+.advantages {
+    padding: 96px 0;
+}
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+.advantages-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
+.advantages-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
