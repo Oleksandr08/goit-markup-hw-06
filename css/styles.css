@@ -639,12 +639,6 @@ icon-link:hover,
     transform: translateY(0%);
 }
 @media screen and (min-width: 768px) {
-
-}
-@media screen and (min-width: 1158px) {
-    .port {
-        padding: 120px 0;
-    }
     .port-list {
         display: flex;
         flex-wrap: wrap;
@@ -655,8 +649,16 @@ icon-link:hover,
     .port-item {
         position: relative;
         flex-basis: 360px;
-        width: calc((100% - 48px) / 3);
+        width: calc((100% - 48px) / 2);
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    }
+
+}
+@media screen and (min-width: 1158px) {
+    .port {
+        padding: 120px 0;
+    }
+    .port-item {
+        width: calc((100% - 48px) / 3);
     }
 }
