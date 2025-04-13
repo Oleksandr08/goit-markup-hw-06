@@ -1062,6 +1062,17 @@ button {
     .modal {
         width: 408px;
         min-height: 584px;
-        padding: 72px 24px 24px 24px;
+    }
+    .modal-text {
+        min-width: 360px;
+    }
+    .input-wrapper {
+        width: 360px;
+    }
+    .textarea-comment {
+        width: 360px;
+    }
+    .modal-form {
+        width: 360px;
     }
 }
