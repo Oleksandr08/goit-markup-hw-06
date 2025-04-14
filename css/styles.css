@@ -351,6 +351,7 @@ button {
     text-align: center;
     color: #ffffff;
     text-align: center;
+    margin-bottom: 72px;
 }
 
 .main-button {
@@ -358,7 +359,7 @@ button {
     height: 56px;
     border-radius: 4px;
     display: block;
-    margin: 72px auto 0;
+    margin: 0 auto;
     border: none;
     background-color: #4d5ae5;
     font-weight: 500;
@@ -387,12 +388,11 @@ button {
     
 @media screen and (min-resolution: 2x) {
     .main {
+        max-width: 1440px;
+        padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
         url(../images/people/Dark-bg-tab@2x-min.jpg);
-    }
-    .main-title {
-        margin-bottom: 48px;
     }
     }
 }
@@ -414,9 +414,7 @@ button {
         }
     .main-title {
         font-size: 56px;
-    }
-    .main-button {
-        margin: 48px auto 0;
+        margin-bottom: 48px;
     }
 }
 
@@ -500,30 +498,26 @@ button {
 }
 /* section 3 */
 .team {
-    background-color: #f4f4fd;
     padding: 96px 0;
+    background-color: #fff;
 }
-
 .team-title {
-    text-transform: capitalize;
     font-weight: 700;
     font-size: 36px;
     line-height: 111%;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    text-transform: capitalize;
     margin-bottom: 72px;
 }
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 72px;
+    max-width: 264px;
 }
 .team-item {
-    max-width: 264px;
     background-color: #fff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -533,6 +527,7 @@ button {
     padding: 32px 0;
 }
 .team-name {
+    
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
@@ -578,26 +573,33 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
-    .team {
-        width: 584px;
-    }
     .team-list {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        gap: 64px 24px;
+        column-gap: 24px;
+        row-gap: 64px;
+        max-width: 552px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
     }
-    .team-item {
-        width: calc((100% - 24px) / 2);
+    .title-name {
+        text-align: center;
     }
 }
-@media screen and (min-width: 1158px) {
-    .team {
-        padding: 120px 0;
-        width: 1140px;
+    @media screen and (min-width: 1158px) {
+    .sect-team {
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
     .team-list {
+        max-width: 1128px;
+        display: flex;
         gap: 24px;
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
     .team-item {
         width: calc((100% - 72px) / 4);
@@ -701,6 +703,7 @@ button {
         0px 2px 1px rgba(46, 47, 66, 0.08);
     }
 }
+
 /* footer */
 .footer {
     background-color: #2e2f42;
@@ -708,43 +711,47 @@ button {
 }
 .container-footer {
     display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 72px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 72px;
+    margin: 0 auto;
+}
+.left-text {
+
 }
 .footer-logo {
-    display: block;
-    margin-bottom: 16px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    text-align: center;
     text-transform: uppercase;
     color: #4d5ae5;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 .footer-web {
     color: #f4f4fd;
 }
 .footer-text {
-    display: block;
-    max-width: 264px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
 }
 .footer-second-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #ffffff;
-    text-align: center;
+    color: #fff;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
 }
 .footer-icon-item {
     display: flex;
@@ -777,8 +784,16 @@ button {
     line-height: 150%;
     letter-spacing: 0.02em;
     color: white;
-    text-align: center;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+.sub-form {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .sub-input {
     border: 1px solid white;
@@ -786,13 +801,15 @@ button {
     width: 288px;
     height: 40px;
     background-color: transparent;
+    font-weight: 400;
     font-size: 12px;
     line-height: 200%;
     letter-spacing: 0.04em;
     padding-left: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
     color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    margin-bottom: 16px;
 }
 .fly-btn {
     border: none;
@@ -803,17 +820,21 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    min-width: 165px;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.04em;
+    text-align: center;
     color: #fff;
     cursor: pointer;
     background-color: #4D5AE5;
-    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .fly-icon {
+    
     fill: #fff;
     margin-left: 16px;
 }
@@ -822,38 +843,44 @@ button {
     background-color: #404bbf;
 }
 @media screen and (min-width: 768px) {
+    .footer {
+        padding: 108px;
+    }
     .container-footer {
-        padding-left: 108px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        justify-content: flex-start;
+        align-items: normal;
     }
-    .footer-logo {
-        text-align: left;
-    }
-    .footer-second-text {
-        text-align: left;
-    }
+    .footer-logo,
+    .footer-second-text,
     .sub-text {
-        text-align: left;
+        justify-content: flex-start;
+    }
+    .sub-form {
+        flex-direction: row;
     }
     .sub-input {
         width: 264px;
     }
-    .sub-form {
-        display: flex;
-        gap: 24px;
-    }
-    .subscribe {
-        margin-right: 90px;
-    }
 }
 @media screen and (min-width: 1158px) {
-    .subscribe {
-        margin-right: none;
-    }
-    .container-footer { 
-        flex-wrap: nowrap;
-    }
     .footer {
         padding: 100px 0;
+    }
+    .container-footer {
+        flex-direction: row;
+        gap: 0;
+    }
+    .left-text {
+        margin-right: 120px;
+    }
+    .footer-icon-item {
+        gap: 16px;
+    }
+    .subscribe {
+        margin-left: auto;
     }
 }
 /* modal */
